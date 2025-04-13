@@ -1,11 +1,12 @@
 name: Test Darshan's MD Improver
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # lets you trigger it manually
 
 jobs:
   refine:
     runs-on: ubuntu-latest
+
     steps:
       - name: Improve markdown using Darshan's action
         uses: Darshan-222004/darshan-md-improver@v1
