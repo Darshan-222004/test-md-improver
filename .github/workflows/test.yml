@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Improve markdown using Darshan's action
-        uses: darshanbharadwaj/darshan-md-improver/md-improver@v1
+        uses: darshanbharadwaj/darshan-md-improver@v1
         with:
-          repo: https://github.com/yourusername/test-md-improver.git
+          repo: https://github.com/darshanbharadwaj/test-md-improver.git
           mdfile: README.md
           purpose: improve the project description
