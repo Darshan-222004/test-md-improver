@@ -1,16 +1,18 @@
 name: Test Darshan MD Improver
 
 on:
-  workflow_dispatch:  # lets you trigger it manually
+  workflow_dispatch:  # allows manual triggering
 
 jobs:
   refine:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
       - name: Improve markdown using Darshan's action
         uses: Darshan-222004/darshan-md-improver@v1
         with:
-          repo: https://github.com/Darshan-222004/test-md-improver.git
-          mdfile: README.md
+          mdfile: README.md  # Ensure this path is correct
           purpose: improve the project description
