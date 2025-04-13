@@ -1,7 +1,7 @@
 name: Test Darshan MD Improver
 
 on:
-  workflow_dispatch:  # allows manual triggering
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   refine:
@@ -9,10 +9,16 @@ jobs:
 
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to the latest stable version
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"  # Ensures Python is available for the action
 
       - name: Improve markdown using Darshan's action
         uses: Darshan-222004/darshan-md-improver@v1
         with:
-          mdfile: README.md  # Ensure this path is correct
+          repo: ${{ github.repository }}  # Passes the full repo name dynamically
+          mdfile: README.md  # Ensure this path is correct and exists in the repo
           purpose: improve the project description
