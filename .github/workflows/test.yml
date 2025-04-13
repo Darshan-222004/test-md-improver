@@ -1,4 +1,4 @@
-name: Test Darshan's MD Improver
+name: Test Darshan MD Improver
 
 on:
   workflow_dispatch:  # lets you trigger it manually
