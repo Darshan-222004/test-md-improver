@@ -1,0 +1,15 @@
+name: Test Darshan's MD Improver
+
+on:
+  workflow_dispatch:
+
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Improve markdown using Darshan's action
+        uses: darshanbharadwaj/darshan-md-improver/.github/actions/md-improver@main
+        with:
+          repo: https://github.com/Darshan-222004/test-md-improver.git
+          mdfile: README.md
+          purpose: improve the project description
